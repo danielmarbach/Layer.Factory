@@ -2,11 +2,11 @@
 {
     using System.Collections.Generic;
 
-    public class FactoryDomainService
+    public class FactoryDomainService : IFactoryDomainService
     {
-        private readonly FactoryRepository repository;
+        private readonly IFactoryRepository repository;
 
-        public FactoryDomainService(FactoryRepository repository)
+        public FactoryDomainService(IFactoryRepository repository)
         {
             this.repository = repository;
         }
@@ -27,6 +27,8 @@
             var factory = this.repository.Load(factoryId);
 
             factory.Assign(producedLayers);
+
+            this.repository.Update(factory);
         }
     }
 }

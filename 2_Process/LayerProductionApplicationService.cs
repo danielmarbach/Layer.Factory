@@ -5,18 +5,18 @@
 
     using Layer.Factory.Domain;
 
-    public class LayerProductionApplicationService
+    public class LayerProductionApplicationService : ILayerProductionApplicationService
     {
-        private readonly FactoryDomainService factoryDomainService;
+        private readonly IFactoryDomainService factoryDomainService;
 
-        private readonly LayerDomainService layerDomainService;
+        private readonly ILayerDomainService layerDomainService;
 
         public LayerProductionApplicationService()
-            : this(new FactoryDomainService(new FactoryRepository()), new LayerDomainService())
+            : this(new FactoryDomainService(new FactoryRepository()), new LayerDomainService(new LayerRepository()))
         {
         }
 
-        public LayerProductionApplicationService(FactoryDomainService factoryDomainService, LayerDomainService layerDomainService)
+        public LayerProductionApplicationService(IFactoryDomainService factoryDomainService, ILayerDomainService layerDomainService)
         {
             this.layerDomainService = layerDomainService;
             this.factoryDomainService = factoryDomainService;
@@ -26,7 +26,7 @@
         {
             var factoryId = new FactoryId(factoryName.Replace(" ", "_"));
 
-            Factory factory = this.factoryDomainService.OpenFactory(factoryId);
+            Factory factory = this.factoryDomainService.OpenFactory(factoryId, factoryName);
 
             return new FactoryInfo(factory.Name)
                    {

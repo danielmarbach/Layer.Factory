@@ -4,13 +4,23 @@ namespace Layer.Factory.Domain
 
     using global::Layer.Factory.Data;
 
-    public class FactoryRepository
+    public class FactoryRepository : IFactoryRepository
     {
         public void Save(Factory factory)
         {
             using (var tx = new TransactionScope())
             {
                 Database.Insert(factory.Id, factory);
+
+                tx.Complete();
+            }
+        }
+
+        public void Update(Factory factory)
+        {
+            using (var tx = new TransactionScope())
+            {
+                Database.Update(factory.Id, factory);
 
                 tx.Complete();
             }

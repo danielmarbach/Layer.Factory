@@ -7,14 +7,14 @@
     {
         private readonly LayerProductionView view;
 
-        private readonly LayerProductionApplicationService layerProductionApplicationService;
+        private readonly ILayerProductionApplicationService layerProductionApplicationService;
 
         public LayerProductionPresenter(LayerProductionView view)
             : this(view, new LayerProductionApplicationService())
         {
         }
 
-        public LayerProductionPresenter(LayerProductionView view, LayerProductionApplicationService layerProductionApplicationService)
+        public LayerProductionPresenter(LayerProductionView view, ILayerProductionApplicationService layerProductionApplicationService)
         {
             this.layerProductionApplicationService = layerProductionApplicationService;
             this.view = view;

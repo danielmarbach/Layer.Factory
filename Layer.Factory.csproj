@@ -50,8 +50,13 @@
     <Compile Include="2_Process\FactoryInfo.cs" />
     <Compile Include="1_Presentation\LayerProductionPresenter.cs" />
     <Compile Include="1_Presentation\LayerProductionView.cs" />
+    <Compile Include="2_Process\ILayerProductionApplicationService.cs" />
     <Compile Include="2_Process\LayerInfo.cs" />
     <Compile Include="2_Process\LayerProductionApplicationService.cs" />
+    <Compile Include="3_Domain\IFactoryDomainService.cs" />
+    <Compile Include="3_Domain\IFactoryRepository.cs" />
+    <Compile Include="3_Domain\ILayerDomainService.cs" />
+    <Compile Include="3_Domain\ILayerRepository.cs" />
     <Compile Include="3_Domain\Layer.cs" />
     <Compile Include="3_Domain\FactoryRepository.cs" />
     <Compile Include="3_Domain\FactoryDomainService.cs" />
