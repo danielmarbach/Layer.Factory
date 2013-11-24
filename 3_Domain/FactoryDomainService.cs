@@ -11,7 +11,7 @@
             this.repository = repository;
         }
 
-        public Factory OpenFactory(FactoryId factoryId, string name = "Layer Factory")
+        public Factory OpenFactory(FactoryId factoryId, FactoryName name)
         {
             var factory = new Factory(factoryId, name);
 

@@ -25,8 +25,9 @@
         public FactoryInfo OpenFactory(string factoryName)
         {
             var factoryId = new FactoryId(factoryName.Replace(" ", "_"));
+            var name = new FactoryName(factoryName);
 
-            Factory factory = this.factoryDomainService.OpenFactory(factoryId, factoryName);
+            Factory factory = this.factoryDomainService.OpenFactory(factoryId, name);
 
             return new FactoryInfo(factory.Name)
                    {
@@ -37,8 +38,9 @@
         public IEnumerable<LayerInfo> ProduceLayers(string factoryName, int numberOfLayers)
         {
             var factoryId = new FactoryId(factoryName.Replace(" ", "_"));
-            
-            var producedLayers = this.layerDomainService.ProduceLayers(numberOfLayers);
+            var quanity = new LayerQuantity(numberOfLayers);
+
+            var producedLayers = this.layerDomainService.ProduceLayers(quanity);
 
             this.factoryDomainService.AssignProducedLayers(factoryId, producedLayers);
 

@@ -13,9 +13,9 @@ namespace Layer.Factory.Domain
             this.repository = repository;
         }
 
-        public IReadOnlyCollection<Layer> ProduceLayers(int numberOfLayers)
+        public IReadOnlyCollection<Layer> ProduceLayers(LayerQuantity quantity)
         {
-            var layers = Enumerable.Range(0, numberOfLayers).Select(i => new Layer()).ToList();
+            var layers = Enumerable.Range(0, quantity).Select(i => new Layer()).ToList();
 
             foreach (var layer in layers)
             {

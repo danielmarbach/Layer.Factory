@@ -12,7 +12,7 @@
 
         private readonly List<Layer> producedLayers;
 
-        public Factory(FactoryId factoryId, string name)
+        public Factory(FactoryId factoryId, FactoryName name)
         {
             this.factoryId = factoryId;
             this.Name = name;
@@ -22,7 +22,7 @@
 
         public DateTimeOffset OpenedAt { get; private set; }
 
-        public string Name { get; private set; }
+        public FactoryName Name { get; private set; }
 
         public ReadOnlyCollection<Layer> ProducedLayers
         {

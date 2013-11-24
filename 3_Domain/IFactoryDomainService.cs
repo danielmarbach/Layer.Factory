@@ -4,7 +4,7 @@
 
     public interface IFactoryDomainService
     {
-        Factory OpenFactory(FactoryId factoryId, string name = "Layer Factory");
+        Factory OpenFactory(FactoryId factoryId, FactoryName name);
 
         void AssignProducedLayers(FactoryId factoryId, IEnumerable<Layer> producedLayers);
     }

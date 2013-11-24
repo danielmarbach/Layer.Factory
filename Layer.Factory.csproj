@@ -53,6 +53,7 @@
     <Compile Include="2_Process\ILayerProductionApplicationService.cs" />
     <Compile Include="2_Process\LayerInfo.cs" />
     <Compile Include="2_Process\LayerProductionApplicationService.cs" />
+    <Compile Include="3_Domain\FactoryName.cs" />
     <Compile Include="3_Domain\IFactoryDomainService.cs" />
     <Compile Include="3_Domain\IFactoryRepository.cs" />
     <Compile Include="3_Domain\ILayerDomainService.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="3_Domain\Factory.cs" />
     <Compile Include="3_Domain\FactoryId.cs" />
     <Compile Include="3_Domain\LayerDomainService.cs" />
+    <Compile Include="3_Domain\LayerQuantity.cs" />
     <Compile Include="4_Data\Database.cs" />
     <Compile Include="3_Domain\LayerRepository.cs" />
     <Compile Include="Application.cs" />

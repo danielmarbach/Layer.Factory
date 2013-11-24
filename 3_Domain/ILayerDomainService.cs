@@ -4,6 +4,6 @@ namespace Layer.Factory.Domain
 
     public interface ILayerDomainService
     {
-        IReadOnlyCollection<Layer> ProduceLayers(int numberOfLayers);
+        IReadOnlyCollection<Layer> ProduceLayers(LayerQuantity quantity);
     }
 }
