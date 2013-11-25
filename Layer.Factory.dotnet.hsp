@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local-project language="dotnet" version="4.0.5155" xml-version="3" flavor="dotNet">
+  <property name="hide-externals" value="true" />
+  <property name="detail-mode" value="true" />
+  <property name="action-set-mod" value="10" />
+  <assemblyList relativeto="">
+    <assembly kind="lib" path="bin\Debug\Layer.Factory.dll" />
+  </assemblyList>
+  <restructuring>
+    <set version="3" name="Model 1" hiview="Codemap" active="true" todo="false" list="0" />
+  </restructuring>
+  <grid-set sep="." version="4.0.5155">
+    <grid name="Diagram 1" enforce="true" locked="true" strict="false">
+      <row>
+        <cell name="Factory" pattern="Layer.Factory.?" vexpanded="true" visibility="public" drill="false">
+          <grid>
+            <row>
+              <cell name="Application" pattern="Layer.Factory.Application" vexpanded="false" visibility="public" drill="false" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <row>
+        <cell name="Presentation" pattern="Layer.Factory.Presentation.?" vexpanded="false" visibility="public" drill="false">
+          <grid>
+            <row>
+              <cell name="LayerProductionPresenter" pattern="Layer.Factory.Presentation.LayerProductionPresenter" vexpanded="false" visibility="public" drill="false" />
+            </row>
+            <row>
+              <cell name="LayerProductionView" pattern="Layer.Factory.Presentation.LayerProductionView" vexpanded="false" visibility="public" drill="false" />
+            </row>
+            <row>
+              <cell name="OpenFactoryEventArgs" pattern="Layer.Factory.Presentation.OpenFactoryEventArgs" vexpanded="false" visibility="public" drill="false" />
+              <cell name="ProduceLayerEventArgs" pattern="Layer.Factory.Presentation.ProduceLayerEventArgs" vexpanded="false" visibility="public" drill="false" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <row>
+        <cell name="Process" pattern="Layer.Factory.Process.?" vexpanded="false" visibility="public" drill="false">
+          <grid>
+            <row>
+              <cell name="LayerProductionApplicationService" pattern="Layer.Factory.Process.LayerProductionApplicationService" vexpanded="false" visibility="public" drill="false" />
+            </row>
+            <row>
+              <cell name="ILayerProductionApplicationService" pattern="Layer.Factory.Process.ILayerProductionApplicationService" vexpanded="false" visibility="public" drill="false" />
+            </row>
+            <row>
+              <cell name="FactoryInfo" pattern="Layer.Factory.Process.FactoryInfo" vexpanded="false" visibility="public" drill="false" />
+              <cell name="LayerInfo" pattern="Layer.Factory.Process.LayerInfo" vexpanded="false" visibility="public" drill="false" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <row>
+        <cell name="Domain" pattern="Layer.Factory.Domain.?" vexpanded="false" visibility="public" drill="false">
+          <grid>
+            <row>
+              <cell name="FactoryDomainService" pattern="Layer.Factory.Domain.FactoryDomainService" vexpanded="false" visibility="public" drill="false" />
+              <cell name="FactoryRepository" pattern="Layer.Factory.Domain.FactoryRepository" vexpanded="false" visibility="public" drill="false" />
+            </row>
+            <row>
+              <cell name="IFactoryDomainService" pattern="Layer.Factory.Domain.IFactoryDomainService" vexpanded="false" visibility="public" drill="false" />
+              <cell name="IFactoryRepository" pattern="Layer.Factory.Domain.IFactoryRepository" vexpanded="false" visibility="public" drill="false" />
+              <cell name="LayerDomainService" pattern="Layer.Factory.Domain.LayerDomainService" vexpanded="false" visibility="public" drill="false" />
+              <cell name="LayerRepository" pattern="Layer.Factory.Domain.LayerRepository" vexpanded="false" visibility="public" drill="false" />
+            </row>
+            <row>
+              <cell name="Factory" pattern="Layer.Factory.Domain.Factory" vexpanded="false" visibility="public" drill="false" />
+              <cell name="ILayerDomainService" pattern="Layer.Factory.Domain.ILayerDomainService" vexpanded="false" visibility="public" drill="false" />
+              <cell name="ILayerRepository" pattern="Layer.Factory.Domain.ILayerRepository" vexpanded="false" visibility="public" drill="false" />
+            </row>
+            <row>
+              <cell name="FactoryId" pattern="Layer.Factory.Domain.FactoryId" vexpanded="false" visibility="public" drill="false" />
+              <cell name="FactoryName" pattern="Layer.Factory.Domain.FactoryName" vexpanded="false" visibility="public" drill="false" />
+              <cell name="Layer" pattern="Layer.Factory.Domain.Layer" vexpanded="false" visibility="public" drill="false" />
+              <cell name="LayerQuantity" pattern="Layer.Factory.Domain.LayerQuantity" vexpanded="false" visibility="public" drill="false" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <row>
+        <cell name="Cross" pattern="Layer.Factory.Cross.?" vexpanded="false" visibility="public" drill="false">
+          <grid>
+            <row>
+              <cell name="Logger" pattern="Layer.Factory.Cross.Logger" vexpanded="false" visibility="public" drill="false" />
+              <cell name="SystemClock" pattern="Layer.Factory.Cross.SystemClock" vexpanded="false" visibility="public" drill="false" />
+            </row>
+          </grid>
+        </cell>
+        <cell name="Data" pattern="Layer.Factory.Data.?" vexpanded="false" visibility="public" drill="false">
+          <grid>
+            <row>
+              <cell name="Database" pattern="Layer.Factory.Data.Database" vexpanded="false" visibility="public" drill="false" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <description>Top-level breakout</description>
+    </grid>
+  </grid-set>
+</local-project>
+
