@@ -11,11 +11,6 @@
 
         private readonly ILayerDomainService layerDomainService;
 
-        public LayerProductionApplicationService()
-            : this(new FactoryDomainService(new FactoryRepository()), new LayerDomainService(new LayerRepository()))
-        {
-        }
-
         public LayerProductionApplicationService(IFactoryDomainService factoryDomainService, ILayerDomainService layerDomainService)
         {
             this.layerDomainService = layerDomainService;

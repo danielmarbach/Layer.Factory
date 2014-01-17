@@ -1,4 +1,7 @@
-﻿namespace Layer.Factory
+﻿using Layer.Factory.Domain;
+using Layer.Factory.Process;
+
+namespace Layer.Factory
 {
     using Layer.Factory.Presentation;
 
@@ -15,7 +18,7 @@
         public void SetUp()
         {
             this.view = new LayerProductionView();
-            this.presenter = new LayerProductionPresenter(this.view);
+            this.presenter = new LayerProductionPresenter(this.view, new LayerProductionApplicationService(new FactoryDomainService(new FactoryRepository()), new LayerDomainService(new LayerRepository())));
             this.presenter.Initialize();
         }
 

@@ -9,11 +9,6 @@
 
         private readonly ILayerProductionApplicationService layerProductionApplicationService;
 
-        public LayerProductionPresenter(LayerProductionView view)
-            : this(view, new LayerProductionApplicationService())
-        {
-        }
-
         public LayerProductionPresenter(LayerProductionView view, ILayerProductionApplicationService layerProductionApplicationService)
         {
             this.layerProductionApplicationService = layerProductionApplicationService;
@@ -40,7 +35,9 @@
         {
             Logger.Log("Handling Open Factory Clicked Event");
 
-            this.layerProductionApplicationService.OpenFactory(e.FactoryName);
+            var factoryInfo = this.layerProductionApplicationService.OpenFactory(e.FactoryName);
+
+            Logger.Log(string.Format("Factory {0} opened.", factoryInfo.Name));
         }
     }
 }
